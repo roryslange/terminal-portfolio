@@ -3,10 +3,10 @@ import { useState } from 'react';
 import 'primeicons/primeicons.css';
         
 export default function Home() {
-  const [powerButtonClass, setPowerButtonClass] = useState<string>(styles.powerButton + ' pi pi-power-off');
-  
+  const [powerButtonClass, setPowerButtonClass] = useState<string>(styles.powerButtonIgnore + ' pi pi-power-off');
+
   const powerMouseDown = () => setPowerButtonClass(styles.powerButtonOnClick + ' pi pi-power-off');
-  const powerMouseUp = () => setPowerButtonClass(styles.powerButton + ' pi pi-power-off');
+  const powerMouseUp = () => setPowerButtonClass(styles.powerButtonIgnore + ' pi pi-power-off');
 
 
   return (
