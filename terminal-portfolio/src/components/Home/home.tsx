@@ -1,6 +1,7 @@
 import styles from './home.module.scss';
 import { useState } from 'react';
 import 'primeicons/primeicons.css';
+import { Link } from 'react-router-dom';
         
 export default function Home() {
   const [powerButtonClass, setPowerButtonClass] = useState<string>(styles.powerButtonIgnore + ' pi pi-power-off');
@@ -15,9 +16,10 @@ export default function Home() {
               <h1>Welcome,</h1>
               <h2>Press power button to begin</h2>
             </div>
-            <a className={powerButtonClass} 
+            <Link className={powerButtonClass} 
               onMouseDown={powerMouseDown}
-              onMouseUp={powerMouseUp} /> 
+              onMouseUp={powerMouseUp}
+              to={'/entry'} /> 
               
         </div>
   )
